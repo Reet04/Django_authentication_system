@@ -74,7 +74,7 @@ def signin(request):
             firstname=user.first_name
             return render(request,'authentication/index.html',{'firstname': firstname})
         else:
-            messages.error(request,"Bad Connection")
+            messages.error(request,"Invalid Credentials")
             return redirect('home')
     return render(request,"authentication/signin.html")
 
